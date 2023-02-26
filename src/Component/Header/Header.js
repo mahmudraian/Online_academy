@@ -11,6 +11,7 @@ import { AuthContext } from '../../Contsxt/Authprovider';
 const Header = () => {
 
   const {user}=useContext(AuthContext);
+  console.log(user?.displayName);
     return (
         <Navbar className='mb-5' variant="dark" expand="lg">
         <Container fluid>

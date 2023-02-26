@@ -36,7 +36,7 @@ const {createUser}=useContext(AuthContext)
         <Form.Control name='name' type="text" placeholder="Enter name" />
         
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="formBasicPhoto">
         <Form.Label >Photo url</Form.Label>
         <Form.Control name='photo_url' type="text" placeholder="Enter email" />
         
