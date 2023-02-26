@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image:url(./../../Fire_study_server/image/cover2.jpg);
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+ 
 }
 
 .App-logo {
