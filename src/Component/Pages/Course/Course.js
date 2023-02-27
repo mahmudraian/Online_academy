@@ -4,13 +4,14 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
 
+
 const Course = ({course}) => {
 
     const {name,id,fee,thumb,student}=course;
 
 
     return (
-<Card className='m-1' style={{ width: '18rem' }}>
+<Card className='mb-5' style={{ width: '18rem' }}>
       <Card.Img variant="top" src={thumb} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
