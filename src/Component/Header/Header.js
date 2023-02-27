@@ -38,6 +38,7 @@ logout()
               navbarScroll
             >
              <Link to='/'><Nav.Link href="#pricing">Home </Nav.Link></Link> 
+             <Link to='/blog'><Nav.Link href="#pricing">Blog </Nav.Link></Link> 
              <Link   to='/login'><Nav.Link href="#pricing">Login</Nav.Link></Link> 
              <Link to='/register'><Nav.Link href="#pricing">Register</Nav.Link></Link> 
               

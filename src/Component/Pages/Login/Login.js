@@ -6,7 +6,7 @@ import { AuthContext } from '../../../Contsxt/Authprovider';
 
 
 const Login = () => {
-const {login}=useContext(AuthContext);
+const {login,seterror,showerror}=useContext(AuthContext);
 const navigate=useNavigate();
 const location=useLocation();
 
@@ -26,10 +26,14 @@ const from=location?.state?.from?.pathname||'/';
         })
         .catch(error=>{
             console.error('error',error);
+            seterror(error.message);
+        
         })
+        console.log(showerror);
     }
 
     return (
+      <div>
         <Form 
         onSubmit={handlelogin}
         style={{color:'whitesmoke'}}>
@@ -43,13 +47,13 @@ const from=location?.state?.from?.pathname||'/';
           <Form.Label>Password</Form.Label>
           <Form.Control name='password' type="password" placeholder="Password" />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+       
         <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
+      {showerror ? <h5 style={{color:'whitesmoke'}}>{showerror}</h5>: ''}
+      </div>
     );
 };
 

@@ -12,6 +12,7 @@ const Authprovider = ({children}) => {
     const [checked,setchecked]=useState(null);
     const [user,setuser]=useState(null);
     const [loading,setloading]=useState(true)
+    const[showerror,seterror]=useState(null);
 
     
     console.log(user?.displayName);
@@ -52,7 +53,7 @@ useEffect(()=>{
 
 
 
-    const userinfo={user,createUser,login,setuser,googlelogin,logout,loading,setchecked,checked}
+    const userinfo={user,createUser,login,setuser,googlelogin,logout,loading,setchecked,checked,seterror,showerror}
     return (
         <div>
             <AuthContext.Provider value={userinfo}>

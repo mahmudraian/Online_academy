@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Blog from "../Component/Pages/BLOG/Blog";
 import CheckOut from "../Component/Pages/Checkout/CheckOut";
 import Finalchek from "../Component/Pages/Checkout/Finalchek";
 import CourseSubject from "../Component/Pages/CourseSubject/CourseSubject";
@@ -38,6 +39,9 @@ import PrivateRoute from "./PrivateRoute";
             },
             {
                 path:'/checked',element:<PrivateRoute><Finalchek></Finalchek></PrivateRoute>
+            },
+            {
+                path:'/blog',element:<Blog></Blog>
             }
 
 
